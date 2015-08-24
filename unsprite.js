@@ -2,10 +2,12 @@ function unsprite() {
   var i = 0,
     className,
     max = arguments.length - 1,
-    callback = arguments[arguments.length - 1],
+    callback = arguments[max],
     drawn = 0,
     images = [],
     body = document.querySelector('body');
+
+  if (callback === undefined) throw new Error('Not enough arguments');
 
   for(;i < max; i++) {
     className = arguments[i];
