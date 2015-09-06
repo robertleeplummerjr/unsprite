@@ -66,7 +66,10 @@ var unsprite = (function() {
           body.removeChild(div);
   
           if (drawn === max) {
-            callback(images);
+            //wait for this process to finish
+            setTimeout(function() {
+              callback(images);
+            }, 0);
           }
         };
   
