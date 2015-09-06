@@ -91,6 +91,7 @@ var unsprite = (function() {
   
   unsprite.setRetina = function setRetina() {
     unsprite._retina = true;
+    return unsprite;
   };
   
   return unsprite;
